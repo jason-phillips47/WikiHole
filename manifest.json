@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "WikiHole",
+    "version": "1.0",
+    "description": "See the Wikipedia Rabbit Hole you've gone down!",
+    "icons": {
+        "16": "images/icon-16.png",
+        "32": "images/icon-32.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+      },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs", "storage", "webNavigation"
+    ],
+    "host_permissions": ["*://*.wikipedia.org/*"],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+        },
+    "minimum_chrome_version": "92"
+}
